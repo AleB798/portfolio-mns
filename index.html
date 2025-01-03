@@ -17,27 +17,57 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-        <header>
-            <!-- place navbar here -->
+        <header class="sticky-top">
+            <nav class="navbar border-body navbar-expand-md">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="" alt="Logo" width="150" class="d-inline-block align-text-top">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>          
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#about">A propos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#projets">Projets</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
         </header>
         <main>
             <!-- DEBUT HERO -->
-            <section id="hero">
+            <section id="hero" class="bg-100-radient-blue">
                 <div class="container">
                     <div class="row justify-content-center align-items-center vh-100">
-                        <div class="col-3 text-center">
-                            <img src='https://dummyimage.com/500x500.gif' alt='Photo de profil de John DOE' class="img-fluid rounded-circle mb-4"/>
-                            <h1>Alexandra BAUMANN </h1>
+                        <div class="col-6 text-center">
+                            <img src='img/illustration-about-me.png' alt='Photo de profil Alexandra' class="img-fluid mb-4"/>
+                        </div>
+                        <div class="col-6 text-center">
+                            <h1 class="typing-effect">Alexandra <span>BAUMANN</span></h1>
                             <p>Développeur web junior</p>
+                            <div class="row justify-content-center about-icons">
+                                <a href="https://github.com/AleB798" class="col-2" target="_blank"><i class="bi bi-github"></i></a>
+                                <a href="https://linkedin.com/in/aalexandra-baumann" class="col-2" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                <button onClick={downloadCV} target="_blank" class="col-2">CV</button>                            
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- FIN HERO -->
-
+            <!-- ABOUT -->
             <section id="about">
                 <div class="container">
                     <div class="row justify-content-center align-items-center vh-100">
@@ -46,12 +76,13 @@
                         </div>
                         <div class="col-6">
                             <h2>A propos de moi</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, sint a optio qui laborum alias nobis neque, labore sed quo, quam quae maiores veritatis enim sit explicabo ullam officiis quibusdam!</p>
+                            <p>Diplômée en tant que développeuse web et forte d’une expérience de 7 ans en tant que graphiste, je fusionnedes compétences techniques et créatives.</p>
                         </div>
                     </div>
                 </div>
             </section>
-
+            <!-- FIN ABOUT -->
+            <!-- SKILLS -->
             <section id="skills">
                 <div class="container">
                     <div class="row justify-content-center align-items-center vh-100">
@@ -157,7 +188,7 @@
                     </div>
                 </div>
             </section>
-
+            <!-- PROJETS -->
             <section id="projects">
                 <div class="container py-5">
                     <div class="row justify-content-center align-items-center">
@@ -231,6 +262,7 @@
                     </div>
                 </div>
             </section>
+            <!-- FIN PROJETS -->
         </main>
         <footer class="bg-dark text-bg-dark">
             <div class="container py-5">

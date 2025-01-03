@@ -1,0 +1,79 @@
+:root {
+    --main-color: #f27457;
+    --second-color: #253659;
+    --light-background-color: #04BF9D;
+    --white: #ffffff;
+    --radial-blue-background: radial-gradient(circle, rgba(22,32,53,1) 32%, rgba(37,54,89,1) 100%);
+}
+
+
+nav {
+    background: var(--main-color);
+}
+
+a.nav-link {
+    font-size: 1.5rem;
+    color: var(--second-color);
+}
+
+a.nav-link:hover {
+    color: white;
+}
+
+section.bg-100-radient-blue {
+    background: var(--radial-blue-background);
+}
+
+h1 > span {
+    font-weight: 700;
+}
+
+h1 + p {
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.about-icons{
+    font-size: 4rem;
+    gap: 3rem;
+}
+
+.about-icons > button {
+    font-size: 1.5rem;
+    background-color: var(--light-background-color);
+    border-radius: 15px;
+    border: none;
+}
+
+/* EFFET TYPEWRITING */
+
+.typing-effect {
+    width: 100%;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    color: var(--main-color);
+    font-size: 4rem;
+  }
+  
+@keyframes typing {
+from { width: 0 }
+}
+      
+@keyframes blink {
+50% { border-color: transparent }
+}
+  
+.typing-effect-delay {
+width: 100%;
+animation: typing 2s steps(17), blink .5s step-end infinite alternate;
+animation-delay: 2s;
+animation-fill-mode: forwards;
+white-space: nowrap;
+overflow: hidden;
+border-right: 3px solid;
+color: var(--main-color);
+font-size: 3rem;
+}
+
